@@ -1,19 +1,19 @@
-dict_item = {"Nasi Goreng": [24, 20000], "Ayam Goreng" : [1,30000]}
+dict_item = {"Nasi":[5,5000], "Ayam":[3,30000]}
 
-total = 0
-for key in dict_item.keys():
-    total = total+(dict_item[key][0]*dict_item[key][1])
-print(f'Total belanja anda adalah {total}')
-if total > 20000 and total <=300000:
-    diskon = 5
-    total = total*(100-diskon)/100
-elif total > 300000 and total <=500000:
-    diskon = 8
-    total = total*(100-diskon)/100
-elif total > 500000:
-    diskon = 10
-    total = total*(100-diskon)/100
-else: 
-    diskon = 0
-    total = total
-print(f'Anda mendapatkan diskon sebesar {diskon}%, total yang harus dibayarkan adalah {total}')
+def delete_item():
+    global dict_item
+    print("1. Delete item \n2. Reset all transaction")
+    delete = int(input("Choose delete type: ").strip())
+    if delete == 1:
+        item_delete = input("Input item name: ").strip().title()
+        if item_delete in dict_item.keys():
+            del dict_item[item_delete]
+            print(dict_item)
+        else: print(f"No present item with name {item_delete}")
+    elif delete == 2:
+        dict_item = {}
+    else: print("Wrong input!")
+    return dict_item
+
+dict_item = delete_item()
+print(dict_item)
