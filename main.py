@@ -1,5 +1,5 @@
 import project
-
+from color_func import printGreen, printRed, printYellow
 dict_item = {}
 print("\n..........Welcome!..........")
 
@@ -14,30 +14,30 @@ while True:
             dict_item = project.input_item()
         elif menu == 2:
             if dict_item == {}:
-                print("\nThere's no item to be updated")
+                printRed("\nThere's no item to be updated")
             else: 
                 project.check_order()
                 print("")
                 dict_item = project.update_item()
         elif menu == 3:
             if dict_item == {}:
-                print("\nThere's no item to be deleted")
+                printRed("\nThere's no item to be deleted")
             else: dict_item = project.delete_item()
         elif menu == 4:
             if dict_item == {}:
-                print("\nThere's no order yet!")
+                printRed("\nThere's no order yet!")
             else: project.check_order()
         elif menu == 5: 
             if dict_item == {}:
-                print("\nThere's no order yet!")
+                printRed("\nThere's no order yet!")
             else: 
                 project.check_order()
                 print("")
                 project.total_price()
-                print("\nThank you for coming!\n")
+                printGreen("\nThank you for coming!\n")
                 break
         elif menu == 6:
-            print("\nThank you for coming!\n")
+            printGreen("\nThank you for coming!\n")
             break 
     except:
-        print("\nPlease only input number based on the menu above")
+        printRed("\nPlease only input number based on the menu above")
