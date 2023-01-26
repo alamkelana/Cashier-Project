@@ -1,5 +1,6 @@
 dict_item = {"Nasi":[5,5000], "Ayam":[3,30000]}
 
+
 def delete_item():
     global dict_item
     print("1. Delete item \n2. Reset all transaction")

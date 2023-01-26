@@ -32,7 +32,6 @@ while True:
                 printRed("\nThere's no order yet!")
             else: 
                 project.check_order()
-                print("")
                 project.total_price()
                 printGreen("\nThank you for coming!\n")
                 break
