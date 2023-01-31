@@ -1,3 +1,8 @@
+"""
+This if the main program, it has the main menu, and the if function to run the function
+inside store.py based on user selection
+You have to run color_func.py and store.py before you run this main.py"""
+
 from store import input_item, update_item, delete_item, check_order, total_price
 from color_func import printGreen, printRed, printYellow
 

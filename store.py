@@ -1,6 +1,7 @@
 """
 This file contains functions that required to run the main.py file
 it consists of functions to modify the main dictionary "dict_item" that will be modified based on the command  
+You have to run this file before running main.py
 """
 
 #Import tabulate library to print table using tabulate format
@@ -22,7 +23,7 @@ def input_item():
     string for item_name, integer for total item, and integer for item_price
     """
 
-    #Declare dict_item as global variables so it can be modified inside all function
+    #Declare dict_item as global variables so it can be modified inside all functions
     global dict_item
 
     try:
@@ -73,7 +74,7 @@ def update_item():
     and update the item based on the user input
     """
 
-    #Declare dict_item as global variables so it can be modified inside all function
+    #Declare dict_item as global variables so it can be modified inside all functions
     global dict_item
 
     #Make a menu to choose different type of updates
@@ -155,7 +156,7 @@ def delete_item():
     then delete the item(s) based on the user input
     """
 
-    #Declare dict_item as global variables so it can be modified inside all function
+    #Declare dict_item as global variables so it can be modified inside all functions
     global dict_item
 
     #Make a menu to choose different type of deletes
@@ -249,7 +250,7 @@ def total_price():
         diskon = 0
         total = total
 
-    #showing the discount the user get and total discounted price
+    #Showing the discount the user get and total discounted price
     printYellow(f'You get {diskon}% discount, you have to pay Rp {int(total)}')
     print("----------------------------------------------------------------------")
 
