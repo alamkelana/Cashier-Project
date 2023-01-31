@@ -1,6 +1,8 @@
 """
 Function for printing in colors using ANSI code
-later it will be used in Store.py and main.py to print in colors based on different conditions
+If you want the color to show up, you need to run the file using an IDE like vscode
+because not all command prompt can use the ANSI code and show the colors in text
+Later, these functions will be used in Store.py and main.py to print in colors based on different conditions
 You have to run this file first before any other files
 """
 

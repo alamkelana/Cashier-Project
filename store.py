@@ -1,5 +1,5 @@
 """
-This file contains functions that required to run the main.py file
+This file contains functions that is required to run the main.py file
 it consists of functions to modify the main dictionary "dict_item" that will be modified based on the command  
 You have to run this file before running main.py
 """
@@ -7,12 +7,12 @@ You have to run this file before running main.py
 #Import tabulate library to print table using tabulate format
 from tabulate import tabulate
 
-#import color_func.py, specify the function name so we can use it instantly
+#Import color_func.py to print in color
 from color_func import printGreen, printRed, printYellow
 
 # fungsi buat ID transaksi
 
-#Declare the dict_item dictionary as empty dictionary so it can be filled later
+#Declare the dict_item dictionary as empty dictionary so it can be filled and modified later
 dict_item = {}
 
 #Function 1: input_item
@@ -47,14 +47,17 @@ def input_item():
                 yn = input("Input another?? (Y/N): ").strip().lower()
                 if yn == "y":
                     break
+
                 elif yn == "n":
                     print("----------------------------------------------------------------------")
                     printGreen("The item(s) was added successfully")
                     print("----------------------------------------------------------------------")
                     return
                 else:
+
                     printRed("\nPlease input Y/N only")
                     continue
+
         print("----------------------------------------------------------------------")
         printGreen("The item(s) was added successfully")
         print("----------------------------------------------------------------------")
@@ -250,7 +253,7 @@ def total_price():
         diskon = 0
         total = total
 
-    #Showing the discount the user get and total discounted price
+    #Showing the discount the user get and the total discounted price
     printYellow(f'You get {diskon}% discount, you have to pay Rp {int(total)}')
     print("----------------------------------------------------------------------")
 
