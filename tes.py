@@ -1,26 +1,8 @@
-global dict_item 
-dict_item = {}
+from tabulate import tabulate
+dict_item = {"nasi goreng": [2,20000], "ayam goreng": [3,30000]}
+print_dict = {"Item Name" : [i for i in dict_item.keys()],
+            "Total Item": [i[0] for i in dict_item.values()],
+            "Price": [i[1] for i in dict_item.values()],
+            "Total": [i[0]*i[1] for i in dict_item.values()]}
 
-def input_item():
-    while True:
-        nama_item = input("Input item name: ").strip().title()
-        jumlah_item = int(input("Input total item: ").strip())
-        harga_item = int(input("Input item price: ").strip())
-        if nama_item in dict_item:
-            print("\nError! Item already in your order")
-        else:
-            dict_item[nama_item] = [jumlah_item, harga_item]
-        print("----------------------------------------------------------------------")
-        while True:
-            yn = input("Input another?? (Y/N): ").strip().lower()
-            if yn == "y":
-                break
-            elif yn == "n":
-                return
-            else:
-                print("\nPlease input Y/N only")
-    print("----------------------------------------------------------------------")
-    print("The item(s) was added successfully")
-    print("----------------------------------------------------------------------")
-
-input_item()
+print(tabulate(print_dict, headers = "keys", tablefmt = "github"))

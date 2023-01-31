@@ -1,3 +1,5 @@
+from tabulate import tabulate
+
 from color_func import printGreen, printRed, printYellow
 
 # fungsi buat ID transaksi
@@ -98,10 +100,12 @@ def delete_item():
 # fungsi check order, pemesanan benar kalo order sudah lengkap, pemesanan
 # belum benar kalau order ada yg kosong, keluarin output hasil transaksi dlm bentuk tabel
 def check_order():
+    print_dict = {"Item Name" : [i for i in dict_item.keys()],
+            "Total Item": [i[0] for i in dict_item.values()],
+            "Price": [i[1] for i in dict_item.values()],
+            "Total": [i[0]*i[1] for i in dict_item.values()]}
     printGreen("\nOrder Details: \n")
-    print("{:<15} {:<15} {:<15} {:<15}".format("Item Name", "Total Item", "Item Price", "Total"))
-    for key in dict_item.keys():
-        print("{:<15} {:<15} {:<15} {:<15}".format(key, dict_item[key][0], dict_item[key][1],dict_item[key][0]*dict_item[key][1]))
+    print(tabulate(print_dict, headers = "keys", tablefmt = "github"))
     print("----------------------------------------------------------------------")
 
 # fungsi total price, tambahin branching ketentuan diskon
