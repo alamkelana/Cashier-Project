@@ -215,7 +215,7 @@ def check_order():
 
     #Printing the table of inputted order using tabulate
     printGreen("\nOrder Details: \n")
-    print(tabulate(print_dict, headers = "keys", tablefmt = "github"))
+    print(tabulate(print_dict, headers = "keys", tablefmt = "github", colalign = ("center",)))
     print("----------------------------------------------------------------------")
 
 #Function 5: total_price
