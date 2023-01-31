@@ -1,3 +1,8 @@
+"""
+Function for printing in colors using ANSI code
+later it will be used in Store.py and main.py to print in colors based on different conditions
+"""
+
 def printRed(text): 
     print("\033[91m {}\033[00m" .format(text))
  
