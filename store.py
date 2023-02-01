@@ -55,7 +55,7 @@ def input_item():
                     return
                 else:
 
-                    printRed("\nPlease input Y/N only")
+                    printRed("\nPlease input Y/N only\n")
                     continue
 
         print("----------------------------------------------------------------------")
@@ -208,15 +208,24 @@ def check_order():
     """
 
     #Adjusting the dictionary using list comprehension so it will fit the tabulate input format
-    print_dict = {"Item Name" : [i for i in dict_item.keys()],
-            "Total Item": [i[0] for i in dict_item.values()],
-            "Price": [i[1] for i in dict_item.values()],
-            "Total": [i[0]*i[1] for i in dict_item.values()]}
+    print_dict = {"Item Name" : [key for key in dict_item.keys()],
+            "Total Item": [value[0] for value in dict_item.values()],
+            "Price": [value[1] for value in dict_item.values()],
+            "Total": [value[0]*value[1] for value in dict_item.values()]}
+
+    #Using for and updating 'total' variable to sum the total price the user have to pay
+    total = 0
+    for key in dict_item.keys():
+        total = total+(dict_item[key][0]*dict_item[key][1])
+    print("----------------------------------------------------------------------")
 
     #Printing the table of inputted order using tabulate
     printGreen("\nOrder Details: \n")
     print(tabulate(print_dict, headers = "keys", tablefmt = "github", colalign = ("center",)))
     print("----------------------------------------------------------------------")
+    print("Total oder", " "*28, "Rp ", total)
+    print("----------------------------------------------------------------------")
+   
 
 #Function 5: total_price
 def total_price():
@@ -236,9 +245,6 @@ def total_price():
         total = total+(dict_item[key][0]*dict_item[key][1])
     print("----------------------------------------------------------------------")
 
-    #Showing the total purchase
-    printYellow(f'Your total purchase is Rp {total}')
-
     #Using if to use the discount based on different conditions, and count the discounted price
     if total > 200000 and total <=300000:
         diskon = 5
@@ -257,3 +263,19 @@ def total_price():
     printYellow(f'You get {diskon}% discount, you have to pay Rp {int(total)}')
     print("----------------------------------------------------------------------")
 
+#Function 5: show_cart
+def show_cart():
+    """This function is used to show the cart to remind the user which item 
+    they have inputted using tabulate library
+    It will be showed when the user want to update or delete item(s)
+    """
+
+    #Adjusting the dictionary using list comprehension so it will fit the tabulate input format
+    print_dict = {"Item Name" : [key for key in dict_item.keys()],
+            "Total Item": [value[0] for value in dict_item.values()],
+            "Price": [value[1] for value in dict_item.values()]}
+
+    #Printing the table of inputted order using tabulate
+    printGreen("\nYour Cart: \n")
+    print(tabulate(print_dict, headers = "keys", tablefmt = "github", colalign = ("center",)))
+    print("----------------------------------------------------------------------")

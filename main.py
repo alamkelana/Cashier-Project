@@ -5,7 +5,7 @@ You have to run color_func.py and store.py before you run this main.py
 """
 
 #Import the functions from store.py
-from store import input_item, update_item, delete_item, check_order, total_price
+from store import input_item, update_item, delete_item, check_order, total_price, show_cart
 
 #Import color_func.py to print in color
 from color_func import printGreen, printRed
@@ -40,7 +40,7 @@ while True:
             else: 
 
                 #Showing the check_order first so the user can remember the item(s) they have inputted
-                check_order()
+                show_cart()
                 print("")
                 dict_item = update_item()
 
@@ -54,7 +54,7 @@ while True:
             else: 
 
                 #Showing the check_order first so the user can remember the item(s) they have inputted
-                check_order()
+                show_cart()
                 print("")
                 dict_item = delete_item()
 
