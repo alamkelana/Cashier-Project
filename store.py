@@ -81,7 +81,7 @@ def update_item():
     global dict_item
 
     #Make a menu to choose different type of updates
-    print("1. Update item name \n2. Update total item \n3. Update item price ")
+    print("1. Update item name \n2. Update total item \n3. Update item price\n ")
     update = int(input("Choose update type (input a number based on the menu above): ").strip())
 
     #Use if for the number that the user choose, so it will update based on user selection from update menu
@@ -163,7 +163,7 @@ def delete_item():
     global dict_item
 
     #Make a menu to choose different type of deletes
-    print("1. Delete an item \n2. Reset all transaction")
+    print("1. Delete an item \n2. Reset all transaction\n")
     delete = int(input("Choose delete type (input a number based on the menu above): ").strip())
 
     #Use if for the number that the user choose, so it will update based on user selection from update menu
@@ -217,7 +217,6 @@ def check_order():
     total = 0
     for key in dict_item.keys():
         total = total+(dict_item[key][0]*dict_item[key][1])
-    print("----------------------------------------------------------------------")
 
     #Printing the table of inputted order using tabulate
     printGreen("\nOrder Details: \n")
