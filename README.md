@@ -20,4 +20,37 @@ This program was made as a simple cashier application that can be used at physic
     - User will get 8% discount for purchases above Rp 300000
     - User will get 10% discount for purchases above Rp 500000
 
+## How  to run the program
+
+1. Make sure all 3 .py file is in the same folder
+2. Run main.py, make sure you use an IDE so you could enjoy the whole experience with colored text, and use the program as your daily cahier machine
+
+## Test Case
+
+1. The main menu will look like this
+
+![image](https://user-images.githubusercontent.com/109506146/216633737-728336ca-6b96-48ac-89d1-424dabacbf0f.png)
+
+2. If you choose 1, it will ask you to input an item and its details, type Y to add another item, and N to end the inputting menu
+
+![image](https://user-images.githubusercontent.com/109506146/216634024-0d5dcda9-976f-40a7-8b42-a9f040fdbfd6.png)
+
+3. Typing 4 will check you inputted order
+
+![image](https://user-images.githubusercontent.com/109506146/216634664-54c73632-ff6c-4122-916c-e48e4ad99cdd.png)
+
+4. If you input your order wrong, you can update it by typing 2 in the main menu, or delete it by typing 3 in the main menu. Don't worry, if you forgot what you
+inputted before, it will show altogether your inputted item first
+
+![image](https://user-images.githubusercontent.com/109506146/216635485-48b170f3-c095-487e-bd77-f97502c7ce92.png)
+
+![image](https://user-images.githubusercontent.com/109506146/216635694-7ca5f4f6-32cf-43b6-b8e5-2828ee1d5e33.png)
+
+5. You can also reset all the transaction by typing 3 and then choose the 2nd type of delete which is reset all transaction
+
+![image](https://user-images.githubusercontent.com/109506146/216636149-24f8c847-c43e-4dbe-91e1-d8f859e72a4e.png)
+
+6. If you're done with everything, you can type 5 to check out your order, it will show your total purchases, and show the discount you will get
+
+![image](https://user-images.githubusercontent.com/109506146/216636497-299df3de-63f2-4efc-87a3-091a7ea77d6e.png)
 
