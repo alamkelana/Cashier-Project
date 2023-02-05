@@ -242,7 +242,6 @@ def total_price():
     total = 0
     for key in dict_item.keys():
         total = total+(dict_item[key][0]*dict_item[key][1])
-    print("----------------------------------------------------------------------")
 
     #Using if to use the discount based on different conditions, and count the discounted price
     if total > 200000 and total <=300000:

@@ -79,7 +79,7 @@ while True:
                 #Showing the check_order first to show all the item(s) the user inputted before
                 check_order()
                 total_price()
-                printGreen("\nThank you for coming!\n")
+                printGreen("Thank you for coming!\n")
                 
                 #Break the infinite loop when you check out the order
                 break
