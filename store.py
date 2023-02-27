@@ -33,11 +33,19 @@ def input_item():
             jumlah_item = int(input("Input total item: ").strip())
             harga_item = int(input("Input item price: ").strip())
 
+
             #Use if function so that the item with same name can't be inputted twice
             if nama_item in dict_item:
                 printRed("\nError! Item already in your order")
             else:
-                #If item name hasn't been inputted before, input the item details into dict_item
+                #Use if function to make sure only positive number can be inputted
+                if jumlah_item>0 and harga_item>0:
+                    pass
+                else: 
+                    printRed("\nPlease only input positive number to 'total item' and 'item price'")
+                    continue
+                #If item name hasn't been inputted before, and the input is positive,
+                #input the item details into dict_item
                 dict_item[nama_item] = [jumlah_item, harga_item]
             print("----------------------------------------------------------------------")
 
